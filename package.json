@@ -1,0 +1,34 @@
+{
+  "name": "tailwindcss-setup",
+  "version": "1.0.0",
+  "description": "tailwind css setup",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "postcss src/tailwind.css -o dist/css/style.css --watch",
+    "dev": "live-server dist",
+    "start": "concurrently \"npm run buildcss\" \"npm run dev\"",
+    "prod": "(SET NODE_ENV=production || NODE_ENV=production) && postcss src/tailwind.css -o dist/css/style.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-frontendfunn:frontendfunn/tailwindcss-setup.git"
+  },
+  "keywords": [
+    "frontendfunn",
+    "tailwindcss",
+    "tailwind"
+  ],
+  "author": "frontendfunn",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
+    "concurrently": "^5.1.0",
+    "cssnano": "^4.1.10",
+    "live-server": "^1.2.1",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "dependencies": {}
+}
